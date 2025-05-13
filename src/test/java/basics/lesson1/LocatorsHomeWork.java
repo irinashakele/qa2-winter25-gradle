@@ -8,17 +8,19 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class LocatorsHomeWork {
 
     private final By CONTACTS_BTN = By.xpath(".//i[@class = 'site-top__menu-right-icon']");
-    private final By FIND_BTN = By.xpath(".//i[@class = 'main-search-submit__icon icon-svg']");
+    //private final By FIND_BTN = By.xpath(".//i[@class = 'main-search-submit__icon icon-svg']");
+    private final By FIND_BTN = By.xpath(".//i[contains(@class, 'main-search-submit')]");
     private final By SHOPPING_CART_ICON = By.xpath(".//i[@class = 'cart-block__icon icon-svg']");
     private final By MAIN_LOGO_IMAGE = By.xpath(".//img[@class = 'main-logo__image']");
     private final By PRODUCT_CATALOG = By.xpath(".//i[@class = 'main-menu__handle-icon icon-svg']");
-    private final By SPORTS_AND_FITNESS_ICON = By.xpath(".//div[@class= 'submenu-lvl1 submenu-lvl1--invisible']/ul/li[11]/a");
+    //private final By SPORTS_AND_FITNESS_ICON = By.xpath(".//div[@class= 'submenu-lvl1 submenu-lvl1--invisible']/ul/li[11]/a");
+    private final By SPORTS_AND_FITNESS_ICON = By.xpath(".//div[contains(@class, 'submenu-lvl1--index')]");
     private final By ALL_GOODS = By.xpath(".//div[@class= 'submenu-lvl1 submenu-lvl1--invisible']/ul/li[3]/div/div/div[4]/div[5]/a/span[1]");//not final version
     private final By SHOW_DETAILED = By.id("CybotCookiebotDialogBodyLevelDetailsButton");
 
     private final By ALL_HAMBURGER_MENU = By.id("hamburger-menu");
     private final By SEARCH_PANEL = By.id("twotabsearchtextbox");
-    private final By CHANGE_LANGUAGE = By.xpath(".//span[@class= 'icp-nav-link-inner']");
+    //private final By CHANGE_LANGUAGE = By.xpath(".//span[@class= 'icp-nav-link-inner']");
     private final By SHOPPING_BASKET = By.id("nav-cart");
     private final By CHANGE_ADDRESS_BTN = By.xpath(".//span[@class = 'a-button a-spacing-top-base a-button-primary glow-toaster-button glow-toaster-button-submit']");
     private final By FREE_DELIVERY_PRODUCTS = By.id("CardInstancezGXPlUQxBI8W4IDtb8TaXg");
