@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShopPurchaseProcess {
+public class ShopPurchaseProcessTest {
     @Test
     public void addClientsWithAddresses() {
 
