@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import pages.BaseFunc;
+import pages.HomePage;
+import pages.SignInPage;
 //import pages.BaseFunc;
 //import pages.HomePage;
 //import pages.SignInPage;
@@ -33,7 +35,20 @@ public class RegistrationTest {
     @Test
     public void passwordInconsistencyTestOnPageObject() {
         BaseFunc baseFunc = new BaseFunc();
-        baseFunc.openHomePage();
+        baseFunc.openHomePage()
+                .acceptCookies()
+                .openLoginPage()
+                .openRegistrationPage();
+
+
+//        baseFunc.openHomePage();
+//
+//        HomePage homePage = new HomePage(baseFunc);
+//        homePage.acceptCookies();
+//        homePage.openLoginPage();
+//
+//        SignInPage signInPage = new SignInPage(baseFunc);
+//        signInPage.openRegistrationPage();
 
     }
 
@@ -60,7 +75,7 @@ public class RegistrationTest {
 //        WebElement registrationLink = browser.findElement(REGISTRATION_LINK);
 //
 //        Actions actions = new Actions(browser);
-//        actions.scrollToElement(registrationLink);
+//        actions.scrollToElement(registrationLink); //podskrollivajet do elementa
 //        actions.perform();
 //
 //        registrationLink.click();

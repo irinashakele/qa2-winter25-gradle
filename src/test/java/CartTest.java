@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.BaseFunc;
+import pages.HomePage;
 
 import java.util.List;
 
@@ -16,6 +17,9 @@ public class CartTest {
     public void itemsInCartCheckOnPageObjects() {
         BaseFunc baseFunc = new BaseFunc();
         baseFunc.openHomePage();
+
+        HomePage homePage = new HomePage(baseFunc);
+        homePage.acceptCookies();
     }
 
 //    @Test
