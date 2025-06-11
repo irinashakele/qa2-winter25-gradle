@@ -11,8 +11,9 @@ public class SignInPage {
         this.baseFunc = baseFunc;
     }
 
-    public void openRegistrationPage() {
+    public RegistrationPage openRegistrationPage() {
         baseFunc.scrollToElement(REGISTRATION_LINK);
         baseFunc.click(REGISTRATION_LINK);
+        return new RegistrationPage(baseFunc);
     }
 }

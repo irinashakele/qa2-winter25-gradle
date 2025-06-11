@@ -1,3 +1,4 @@
+import model.PageObjectUser;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -31,6 +32,8 @@ public class RegistrationTest {
     private final String PASSWORD_COMPLEXITY_ERROR = "parolei jāsatur vismaz viens skaitlis, mazā burti, lielā burti un īpašais simbols";
     private final String PASSWORD_MATCH_ERROR = "nesakrīt ar apstiprinājumu";
 
+//    private PageObjectUser user = new PageObjectUser("FirstName", "Tester",
+//            "tester@tester.lv", "qwerty12345!");
 
     @Test
     public void passwordInconsistencyTestOnPageObject() {
@@ -38,7 +41,24 @@ public class RegistrationTest {
         baseFunc.openHomePage()
                 .acceptCookies()
                 .openLoginPage()
-                .openRegistrationPage();
+                .openRegistrationPage()
+                .registerUser(new PageObjectUser(true), true);
+
+//        -----------------ALTERNATIVE------------------------------
+//        BaseFunc baseFunc = new BaseFunc();
+//        baseFunc.openHomePage()
+//                .acceptCookies()
+//                .openLoginPage()
+//                .openRegistrationPage()
+//                .typeFirstName("FirstName")
+//                .typeLastName("Tester")
+//                .typeEmail("tester@tester.lv")
+//                .typePassword("qwerty12345!")
+//                .confirmPassword("qwerty12345")
+//                .scrollToRegistrationBtn()
+//                .applyForMarketingEmails()
+//                .applyForNews()
+//                .pressRegistrationBtn();
 
 
 //        baseFunc.openHomePage();

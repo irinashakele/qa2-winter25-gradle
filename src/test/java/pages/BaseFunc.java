@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -48,5 +49,9 @@ public class BaseFunc {
         actions.perform();
     }
 
-
+    public void type(By locator, String text) {//vvesti kakoj-to tekst
+        WebElement inputField = driver.findElement(locator);
+        inputField.clear(); //chistit pole
+        inputField.sendKeys(text);
+    }
 }
